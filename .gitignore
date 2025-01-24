@@ -1,0 +1,9 @@
+# ignore all
+*
+
+# except
+!.gitignore
+!user.js
+!chrome/
+!chrome/custom.css
+!chrome/customContent.css

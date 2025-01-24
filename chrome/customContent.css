@@ -1,0 +1,13 @@
+#root.root {
+	--general-margin: 6px !important;
+}
+
+@-moz-document regexp("^moz-extension://.*?/sidebar/sidebar.html") {
+	.Tab {
+		height: calc(var(--tabs-height) + var(--tabs-margin) + 2px) !important;
+
+		&[data-active="true"] .body {
+			outline: none !important;
+		}
+	}
+}

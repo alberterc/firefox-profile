@@ -1,0 +1,51 @@
+/** START OF CUSTOM CSS **/
+
+/* Colors */
+.urlbarView-url {
+	color: #878787 !important;
+}
+
+/* Remove border and add padding to navbar */
+#nav-bar {
+	border: none !important;
+	padding: 5px 0px !important;
+
+	/* Remove the padding from the right side of the navbar */
+	#PanelUI-menu-button {
+		padding-inline-end: 0 !important;
+	}
+
+	/* Remove the padding from the left side of the navbar */
+	#stop-reload-button {
+		padding-inline-start: 0 !important;
+	}
+}
+
+/* Add padding to the top of the navbar */
+@media (-moz-bool-pref: "uc.tweak.hide-tabs-bar"),
+(-moz-bool-pref: "uc.tweak.hide-tabs-bar.no-window-controls") {
+	:root:not([customizing]) {
+		&[tabsintitlebar] #nav-bar {
+			padding-top: 5px !important;
+		}
+	}
+}
+
+/* Change max width and position of urlbar */
+:root {
+	& #urlbar-container {
+		max-width: 35vw !important;
+    	margin: 0 auto !important;
+	}
+	& #urlbar {
+    	--urlbar-width: 35vw !important;
+	}
+}
+
+/* Remove outline when the url bar is expanded */
+#urlbar-background,
+#searchbar {
+	#urlbar[open] & {
+		outline: none !important;
+	}
+}
